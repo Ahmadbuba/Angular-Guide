@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-app';
+  turner = true;
+  page(recieve: boolean) {
+    recieve? this.turner = true: this.turner = false;
+  }
+
 }

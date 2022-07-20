@@ -7,9 +7,7 @@ import { Recipe } from './recipe.model';
   styleUrls: ['./recipes.component.scss']
 })
 export class RecipesComponent implements OnInit {
-  recipes: Recipe[] = [
-    new Recipe('A test Recipe', 'This is simply a test', 'https://www.themediterraneandish.com/wp-content/uploads/2020/07/harissa-chicken-recipe-7.jpg')
-  ];
+  selectedRecipe: Recipe;
   constructor() { }
 
   ngOnInit(): void {
