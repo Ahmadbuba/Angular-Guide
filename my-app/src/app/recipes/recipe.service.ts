@@ -20,7 +20,7 @@ export class RecipeService {
           ),
         new Recipe(
           'Big Fat Burger',
-          'Another Recipe',
+          'Scumptous burger to feel your delight',
           'https://upload.wikimedia.org/wikipedia/commons/b/be/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg',
            [
             new Ingredient('Buns',2),
@@ -30,6 +30,12 @@ export class RecipeService {
       ];
 
       constructor(private slService: ShoppingListService) {}
+
+
+      setRecipes(recipes: Recipe[]) {
+        this.recipes = recipes;
+        this.recipesChanged.next(this.recipes.slice())
+      }
 
       getRecipes() {
         return this.recipes.slice();
